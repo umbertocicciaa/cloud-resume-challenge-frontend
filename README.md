@@ -14,8 +14,8 @@ This project is the frontend for the Cloud Resume Challenge. It is a simple web 
 
 - HTML
 - CSS
-- JavaScript
-- Gcp (Firestore, Cloud Functions, API Gateway, CDN, Load Balancer, DNS, Domains)
+- 11ty
+- Gcp (Firestore, Buckets, Cloud Functions, API Gateway, CDN, Load Balancer, DNS, Domains)
 
 ## License
 
