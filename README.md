@@ -1,4 +1,4 @@
-# cloud-resume-challenge-frontend
+# Cloud-resume-challenge-frontend
 
 ## Project Overview
 
