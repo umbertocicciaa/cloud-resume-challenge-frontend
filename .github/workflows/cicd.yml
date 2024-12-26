@@ -36,7 +36,7 @@ jobs:
         uses: "google-github-actions/upload-cloud-storage@v1"
         with:
           path: "./_site/index.html"
-          destination: "gs://${{ secrets.BUCKET_NAME }}"
+          destination: "${{ secrets.BUCKET_NAME }}"
 
       - name: Set public access
-        run: "gsutil iam ch allUsers:objectViewer gs://${{ secrets.BUCKET_NAME }}"
+        run: "gsutil iam ch allUsers:objectViewer ${{ secrets.BUCKET_NAME }}"
