@@ -9,12 +9,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
 
       - name: Install dependencies
         run: npm install
@@ -25,13 +25,14 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
+          project_id: ${{ secrets.PROJECT_ID }}
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
       - name: Upload to Google Cloud Storage
         uses: google-github-actions/upload-cloud-storage@v1
         with:
           path: _site/*
-          destination: gs://YOUR_BUCKET_NAME
+          destination: gs://${{ secrets.BUCKET_NAME }}
 
       - name: Set public access
-        run: gsutil iam ch allUsers:objectViewer gs://YOUR_BUCKET_NAME
+        run: gsutil iam ch allUsers:objectViewer gs://${{ secrets.BUCKET_NAME }}
