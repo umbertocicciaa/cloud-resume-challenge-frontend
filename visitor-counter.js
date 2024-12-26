@@ -1,5 +1,5 @@
 async function updateVisitorCounter() {
-    const response = await fetch('https://cloud-resume-gateway-8yv80jb4.ew.gateway.dev/update-visitor', {
+    const response = await fetch('https://cloud-resume-gateway-cors-8yv80jb4.ew.gateway.dev/update-visitor', {
         method: 'POST'
     });
     if (!response.ok) {
@@ -8,7 +8,7 @@ async function updateVisitorCounter() {
 }
 
 async function getVisitorCounter() {
-    const response = await fetch('https://cloud-resume-gateway-8yv80jb4.ew.gateway.dev/read');
+    const response = await fetch('https://cloud-resume-gateway-cors-8yv80jb4.ew.gateway.dev/read');
     if (response.ok) {
         const visitors = await response.json();
         const visitorCount = visitors[0].counter;
