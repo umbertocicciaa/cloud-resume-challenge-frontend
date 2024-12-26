@@ -31,9 +31,15 @@ jobs:
           project_id: ${{ secrets.PROJECT_ID }}
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      - name:
+      - name: Upload index.html
         id: "upload-file"
         uses: "google-github-actions/upload-cloud-storage@v1"
         with:
           path: "./_site/index.html"
+          destination: "${{ secrets.BUCKET_NAME }}"
+
+      - name: Upload javascripts
+        uses: "google-github-actions/upload-cloud-storage@v1"
+        with:
+          path: "./_site/visitor-counter.js"
           destination: "${{ secrets.BUCKET_NAME }}"
