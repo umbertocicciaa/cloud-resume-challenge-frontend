@@ -25,19 +25,26 @@ jobs:
       - name: Build 11ty site
         run: npm run build
 
-      - name: List build directory contents
-        run: ls -la _site
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
           project_id: ${{ secrets.PROJECT_ID }}
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
+      - name: List build directory contents
+        run: ls -la _site
+
+      - name:
+        id: "upload-file"
+        uses: "google-github-actions/upload-cloud-storage@v1"
+        with:
+          path: "/_site/index.html"
+          destination: "gs://${{ secrets.BUCKET_NAME }}"
+
       - name: Upload to Google Cloud Storage
         uses: google-github-actions/upload-cloud-storage@v1
         with:
-          path: _site/*
+          path: _site
           destination: "gs://${{ secrets.BUCKET_NAME }}"
 
       - name: Set public access
