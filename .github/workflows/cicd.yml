@@ -37,6 +37,3 @@ jobs:
         with:
           path: "./_site/index.html"
           destination: "${{ secrets.BUCKET_NAME }}"
-
-      - name: Set public access
-        run: "gsutil iam ch allUsers:objectViewer ${{ secrets.BUCKET_NAME }}"
