@@ -95,5 +95,3 @@ layout: "template.html"
 - Supported **UnicalLoveTelegram**, assisting University of Calabria students.
 
 ---
-
-This resume is formatted in Markdown and ready for use. Let me know if you'd like any adjustments!
