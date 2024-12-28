@@ -50,7 +50,7 @@ layout: "template.html"
 ## 🛠️ **SKILLS**
 
 - **Technologies:** Angular, Blazor, .NET, ASP.NET Core, OpenAI, REST API, Docker, Kubernetes
-- **Cloud Providers:** AWS, Microsoft Azure
+- **Cloud Providers:** AWS, Microsoft Azure, Gcp
 - **Databases:** SQLServer, MongoDB, PostgreSQL, SQLite
 - **Programming Languages:** C#, Java, Python, Bash
 - **Soft Skills:** Problem Solving, Teamwork, Proactivity, Communication
