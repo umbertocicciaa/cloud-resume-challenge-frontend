@@ -59,6 +59,14 @@ layout: "template.html"
 
 ## 📂 **PROJECTS**
 
+- **[Cloud Resume Challenge](https://github.com/umbertocicciaa/cloud-resume-challenge-frontend)**  
+  _Cloud DNS, Load Balancer, SSL/TLS Certificate, Cloud CDN, Cloud Storage, API Gateway, Cloud Functions, Firestore, GitHub Actions, HTML, CSS, JavaScript, Python_
+
+  - Created custom DNS, linked DNS to load balancer and bucket.
+  - Developed a static HTML web page using HTML, JavaScript, and CSS, deployed to Cloud Storage bucket.
+  - Integrated a Firestore database for storing user visitor counter, implementing communication via HTTPS with an API Gateway.
+  - Implemented backend functions that update the database using Cloud Functions and Python.
+
 - **[Exam Online](https://github.com/umbertocicciaa/EsamiOnline)**  
   _C#, Blazor, ASP.NET Core, gRPC, xUnit, Docker_
 
